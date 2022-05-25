@@ -14,7 +14,7 @@ public class Hook extends BaseTest {
 
     @After
     public void after(Scenario scenario) {
-        System.out.println("Scenario end name: " + scenario.getName() + "status: " + scenario.getStatus());
+        System.out.println("Scenario end name: " + scenario.getName() + ", status: " + scenario.getStatus());
 
     }
 
