@@ -1,0 +1,6 @@
+{
+  "baseURI": "https://app.asana.com/api/1.0/",
+  "workspacesPath": "/workspaces",
+  "getStatusCode": 200,
+  "token": "1/1202244969120911:d683fac1310db84b3a187a500f19f6c2"
+}
