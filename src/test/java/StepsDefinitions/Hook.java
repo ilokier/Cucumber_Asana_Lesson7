@@ -18,17 +18,16 @@ public class Hook extends BaseTest {
 
     @After
     public void after(Scenario scenario) {
-        System.out.println("Scenario end name: " + scenario.getName() + ", status: " + scenario.getStatus());
+        logger.info("Scenario end name: " + scenario.getName() + ", status: " + scenario.getStatus());
 
     }
 
-    @After(value = "@post")
+    @After(value = "@update")
     public void clean(Scenario scenario) {
         requestBuilder = new RequestBuilder();
-        //project = MrJson.readProject(projectPath);
         logger.info("projectGID =  " + project.getGid());
         response = requestBuilder.sendDeleteRequestForProject(project.getGid());
-        System.out.println("Scenario end name with clean: " + scenario.getName() + ", status: " + scenario.getStatus());
+        logger.info("Scenario end name with clean: " + scenario.getName() + ", status: " + scenario.getStatus());
     }
 
 }

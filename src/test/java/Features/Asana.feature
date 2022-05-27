@@ -5,16 +5,22 @@ Feature: Testing New Asana project
     When  User perform astana GET workspace operation
     Then  User is able to see response with workspace details
 
-  @post
   Scenario: Post new project object
     Given  I have project object
     When  User perform astana POST project operation
     Then  User is able to see response with project details
 
+  @update
+  Scenario: Update project posted in previous scenario
+    Given I have project object
+    When  User perform astana PUT project operation
+    Then  User is able to see project changed details
 
+  Scenario: Get project deleted in previous scenario
+    Given I have project object
+    When  User perform astana GET project operation
+    Then  User is able to see project not exists
 
-#  Scenario: Get projects for workspace
-#    Given
 
 #  E2E business flow:
 #    1. POST - tworzymy entity np. projekt (status+czas+body validation) - stąd id używamy do geta niżej

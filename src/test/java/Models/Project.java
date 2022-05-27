@@ -12,6 +12,8 @@ import lombok.ToString;
 public class Project {
     private String gid;
     private String name;
+    private String updatedName;
     private String resource_type;
+
 
 }

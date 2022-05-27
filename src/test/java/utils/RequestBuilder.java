@@ -22,9 +22,10 @@ public class RequestBuilder extends BaseTest {
         return response;
     }
 
-    public Response sendGetRequestForProjects() {
+    public Response sendGetRequestForProject(String projectGID) {
         Response response = given()
-                .spec(getRequestSpecification(data.getProjectsPath()))
+                .spec(getRequestSpecification(data.getProjectPath()))
+                .pathParam("project_gid", projectGID)
                 .get();
         logger.info("<<<<<Get response: " + response.asPrettyString());
         return response;
@@ -40,9 +41,19 @@ public class RequestBuilder extends BaseTest {
         return response;
     }
 
+    public Response sendPutRequestForProject(String projectGID) {
+        Response response = given().log().all()
+                .spec(getRequestSpecification(data.getProjectPath()))
+                .pathParam("project_gid", projectGID)
+                .body(new File(updateProjectDataPath))
+                .put();
+        logger.info("<<<<<Put response: " + response.asPrettyString());
+        return response;
+    }
+
     public Response sendDeleteRequestForProject(String projectGID) {
         Response response = given().contentType(ContentType.JSON)
-                .spec(getRequestSpecification(data.getProjectsPath() + (data.getProjectPath())))
+                .spec(getRequestSpecification(data.getProjectPath()))
                 .pathParam("project_gid", projectGID)
                 .delete();
         logger.info("status code for delete: " + response.statusCode());

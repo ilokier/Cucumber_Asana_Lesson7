@@ -3,9 +3,10 @@
   "workspacesPath": "/workspaces",
   "projectsPath": "/projects",
   "projectInWorkspacePath": "/workspaces/{workspace_gid}/projects",
-  "projectPath": "/{project_gid}",
+  "projectPath": "/projects/{project_gid}",
   "getStatusCode": 200,
   "postStatusCode": 201,
   "deleteStatusCode": 200,
+  "notFoundStatusCode": 404,
   "token": "1/1202244969120911:d683fac1310db84b3a187a500f19f6c2"
 }

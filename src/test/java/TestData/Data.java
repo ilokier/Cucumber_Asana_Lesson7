@@ -17,6 +17,7 @@ public class Data {
     private int getStatusCode;
     private int postStatusCode;
     private int deleteStatusCode;
+    private int notFoundStatusCode;
     private String token;
 }
 
