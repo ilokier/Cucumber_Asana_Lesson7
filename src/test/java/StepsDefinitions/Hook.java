@@ -22,7 +22,7 @@ public class Hook extends BaseTest {
 
     }
 
-    @After(value = "@update")
+    @After(value = "@cleanAfter")
     public void clean(Scenario scenario) {
         requestBuilder = new RequestBuilder();
         logger.info("projectGID =  " + project.getGid());

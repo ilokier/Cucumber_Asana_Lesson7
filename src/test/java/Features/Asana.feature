@@ -10,7 +10,7 @@ Feature: Testing New Asana project
     When  User perform astana POST project operation
     Then  User is able to see response with project details
 
-  @update
+  @cleanAfter
   Scenario: Update project posted in previous scenario
     Given I have project object
     When  User perform astana PUT project operation
