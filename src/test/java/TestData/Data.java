@@ -13,8 +13,10 @@ public class Data {
     private String workspacesPath;
     private String projectsPath;
     private String projectInWorkspacePath;
+    private String projectPath;
     private int getStatusCode;
     private int postStatusCode;
+    private int deleteStatusCode;
     private String token;
 }
 

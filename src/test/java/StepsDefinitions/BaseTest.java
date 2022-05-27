@@ -22,16 +22,16 @@ public class BaseTest {
     protected Response response;
     protected RequestBuilder requestBuilder;
     protected Workspace workspace;
-    protected Project project;
+    protected static Project project;
 
-    public RequestSpecification getRequestSpecification(String workspaceURL) {
+    public RequestSpecification getRequestSpecification(String path) {
         RequestSpecification requestSpecification =
                 given()
                         .auth().oauth2(data.getToken())
                         .log()
                         .all()
                         .baseUri(data.getBaseURI())
-                        .basePath(workspaceURL);
+                        .basePath(path);
         return requestSpecification;
     }
 

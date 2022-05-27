@@ -5,11 +5,13 @@ Feature: Testing New Asana project
     When  User perform astana GET workspace operation
     Then  User is able to see response with workspace details
 
-
+  @post
   Scenario: Post new project object
-    Given : I have project object
-    When  User perform astana POST workspace operation
+    Given  I have project object
+    When  User perform astana POST project operation
     Then  User is able to see response with project details
+
+
 
 #  Scenario: Get projects for workspace
 #    Given
