@@ -9,10 +9,9 @@ import lombok.ToString;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-public class Workspace {
+public class Project {
     private String gid;
     private String name;
     private String resource_type;
-
 
 }

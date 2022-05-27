@@ -5,7 +5,6 @@ import io.cucumber.java.Before;
 import io.cucumber.java.Scenario;
 
 public class Hook extends BaseTest {
-
     @Before
     public void intTitle(Scenario scenario) {
         System.out.println("Scenario start name: " + scenario.getName());
